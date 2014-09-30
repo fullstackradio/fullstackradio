@@ -1,0 +1,24 @@
+---
+layout: default
+title: Home
+use:
+    - episodes
+---
+{% for episode in data.episodes %}
+    <article>
+        <header>
+            <h2><a href="{{ site.url }}{{ episode.url }}">{{ episode.title }}</a></h2>
+        </header>
+        <div>
+            {{ episode.blocks.content|raw }}
+        </div>
+        {% if episode.meta.tags %}
+            <p class="tags">
+            Tags:
+            {% for tag in episode.meta.tags %}
+            <a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+            {% endfor %}
+            </p>
+        {% endif %}
+    </article>
+{% endfor %}

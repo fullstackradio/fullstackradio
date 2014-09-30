@@ -1,0 +1,5 @@
+sculpin_content_types:
+    episodes:
+        type: path
+        permalink: blog/:basename
+        # I DONT WANT ANY LINKS! GO AWAY!
