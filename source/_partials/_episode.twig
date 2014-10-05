@@ -1,0 +1,22 @@
+<article class="episode">
+    <header class="episode-header">
+        <h2 class="episode-header-title">
+            <a class="episode-link" href="{{ site.url }}{{ episode.url }}">{{ episode.title }}</a>
+        </h2>
+    </header>
+    <div class="episode-body">
+        {{ episode.blocks.content|raw }}
+    </div>
+    <div class="episode-audio">
+        <audio controls class="episode-audio-player">
+          <source src="horse.ogg" type="audio/ogg">
+          <source src="horse.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <a href="#">Download</a>
+    </div>
+    <div class="episode-notes">
+        <h3 class="episode-notes-heading">Notes</h3>
+        {{ episode.blocks.notes|raw }}
+    </div>
+</article>

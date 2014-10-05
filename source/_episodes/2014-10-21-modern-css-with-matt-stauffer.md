@@ -3,10 +3,13 @@ title: Modern CSS with Matt Stauffer
 
 ---
 
-The first commit to the Sculpin repository was made on December 20th, 2011.
-What a trip since then!
+{% block content %}
+In our very first episode, Adam talks with [Matt Stauffer](#) of [Tighten Co](http://tighten.co) about OOCSS, BEM, SMACSS, preprocessors, common CSS pitfalls, and how stylesheets are the worst.
+{% endblock %}
 
-Sculpin has always been a big fan of [Markdown][1]. So this post was
-written in Markdown. :)
-
-[1]: http://daringfireball.net/projects/markdown/
+{% block notes %}
+- [BEM](#)
+- [OOCSS](#)
+- ["Medium's CSS is actually pretting f***ing good"](#)
+- ["About HTML semantics and front-end architecture"](#)
+{% endblock %}
