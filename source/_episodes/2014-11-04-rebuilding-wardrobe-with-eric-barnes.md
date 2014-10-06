@@ -5,7 +5,7 @@ draft: true
 ---
 
 {% block content %}
-Adam talks with [Eric Barnes](#) about rebuilding [Wardrobe](#), a minimalistic blogging platform.
+Adam talks with [Eric Barnes](#) of [Userscape](http://userscape.com) about rebuilding [Wardrobe](#), a minimalistic blogging platform.
 {% endblock %}
 
 {% block links %}
