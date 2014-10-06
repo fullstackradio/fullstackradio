@@ -18,22 +18,35 @@
         <![endif]-->
     </head>
     <body>
-        <div class="container">
-            <header>
-                <h1>Full Stack Radio</h1>
-            </header>
-            <nav>
-                <ul>
-                    <li><a href="/">All Episodes</a></li>
-                    <li><a href="#">iTunes</a></li>
-                    <li><a href="#">RSS</a></li>
+        <div class="container-fluid">
+            <header class="siteHeader">
+                <h1><a class="link--secondary" href="/">Full Stack Radio</a></h1>
+                <ul class="list-inline">
+                    <li><a class="link--inline" href="/">All Episodes</a></li>
+                    <li><a class="link--inline" href="#">iTunes</a></li>
+                    <li><a class="link--inline" href="#">RSS</a></li>
+                    <li><a class="link--inline" href="#">Contact</a></li>
                 </ul>
-            </nav>
-            <div class="mainContent">
-                {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
+            </header>
+            <div class="siteContent">
+                <div class="row">
+                    <div class="col-sm-4 col-sm-push-8">
+                        <aside class="siteDescription">
+                            <p>
+                                A podcast for developers interested in building great software products.
+                            </p>
+                            <p>
+                                Every episode <a href="http://twitter.com/adamwathan">@adamwathan</a> is joined by a guest to talk about everything from product design and user experience to unit testing and system administration.
+                            </p>
+                        </aside>
+                    </div>
+                    <div class="col-sm-8 col-sm-pull-4">
+                        {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
+                    </div>
+                </div>
             </div>
         </div>
-        <footer class="container">
+        <footer class="container text-center">
             &copy; {{ "now"|date("Y") }} {{ site.title }}
         </footer>
 
