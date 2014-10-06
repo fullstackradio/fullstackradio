@@ -1,7 +1,8 @@
 @import "../vendor/bootstrap/less/bootstrap.less";
 
 @font-family-base: 'Lato', @font-family-serif;
-@font-size-base: 16px;
+@font-size-base: 14px;
+@gray-lighter: lighten(@gray-base, 65%); // #eee
 
 @headings-font-weight: 700;
 
@@ -17,6 +18,11 @@
     margin-bottom: 3em;
 }
 
+.pageHeading {
+    margin-top: 0;
+    font-size: @font-size-h4;
+}
+
 .link--secondary {
     color: @gray-dark;
 }
@@ -26,7 +32,14 @@
     &-header {
         &-title {
             margin-top: 0;
+            margin-bottom: (@line-height-computed / 4);
             font-size: @font-size-h4;
+        }
+        &-meta {
+            margin-top: 0;
+            font-size: @font-size-base;
+            font-weight: 500;
+            color: @gray-lighter;
         }
     }
     &-audio {

@@ -2,9 +2,12 @@
     <header class="episode-header">
         <h2 class="episode-header-title">
             <a class="link--secondary" href="{{ site.url }}{{ episode.url }}">
-                Episode #{{ episode.number }}: {{ episode.title }}
+                {{ episode.title }}
             </a>
         </h2>
+        <h3 class="episode-header-meta">
+            Episode #{{ episode.number }} &ndash; {{ episode.date|date('F j, Y') }}
+        </h3>
     </header>
     <div class="episode-body">
         {{ episode.blocks.content|raw }}

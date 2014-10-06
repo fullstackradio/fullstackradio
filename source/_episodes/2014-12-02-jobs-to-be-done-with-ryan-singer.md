@@ -5,7 +5,7 @@ draft: true
 ---
 
 {% block content %}
-Adam talks with [Ryan Singer](#) of [Basecamp](http://basecamp.com) about understanding the problems our products are trying to solve and how a change in perspective can have a radical impact on what we build. They also talk about how to eliminate waste in the UX process.
+Adam talks with [Ryan Singer](http://twitter.com/rjs) of [Basecamp](http://basecamp.com) about understanding the problems our products are trying to solve and how a change in perspective can have a radical impact on what we build. They also talk about how to eliminate waste in the UX process.
 {% endblock %}
 
 {% block links %}
