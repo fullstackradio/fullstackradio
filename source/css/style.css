@@ -1330,7 +1330,7 @@ td.visible-print,th.visible-print{display:table-cell!important}}
 .siteHeader{margin-bottom:2em}
 .siteDescription{margin-bottom:3em}
 .pageHeading{margin-top:0;font-size:18px}
-.link--secondary{color:#333}
+.link--secondary,.link--secondary:hover{color:#333}
 .episode{margin-bottom:5em}
 .episode-header-title{margin-top:0;margin-bottom:5px;font-size:18px}
 .episode-header-meta{margin-top:0;font-size:14px;font-weight:500;color:#a6a6a6}
