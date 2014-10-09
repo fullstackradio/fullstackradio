@@ -1,4 +1,4 @@
 sculpin_content_types:
     episodes:
         type: path
-        permalink: episodes/:year/:month/:day/:basename/index.html
+        permalink: episodes/:basename/index.html
