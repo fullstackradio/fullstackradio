@@ -23,7 +23,7 @@ permalink: itunes.rss
             <itunes:email>adam.wathan@gmail.com</itunes:email>
         </itunes:owner>
 
-        <itunes:image href="http://fullstackradio.github.io/img/podcast-cover.jpg" />
+        <itunes:image href="http://fullstackradio.com/img/podcast-cover.jpg" />
 
         <itunes:category text="Technology">
             <itunes:category text="Tech News"/>
@@ -36,7 +36,7 @@ permalink: itunes.rss
             <itunes:summary>
                 <![CDATA[{{ episode.itunes_summary }}]]>
             </itunes:summary>
-            <itunes:image href="http://fullstackradio.github.io/img/podcast-cover.jpg" />
+            <itunes:image href="http://fullstackradio.com/img/podcast-cover.jpg" />
             <enclosure url="{{ episode.download }}" length="{{ episode.filesize }}" type="audio/mp3" />
             <guid>{{ episode.download }}</guid>
             <pubDate>{{ episode.date|date("D, d M Y H:i:s O", "Etc/UTC") }}</pubDate>
