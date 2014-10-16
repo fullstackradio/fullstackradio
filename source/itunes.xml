@@ -1,0 +1,48 @@
+---
+use: ["episodes"]
+permalink: itunes2.rss
+---
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+
+    <channel>
+        <title>Full Stack Radio</title>
+        <link>http://fullstackradio.com</link>
+        <language>en-us</language>
+        <copyright>2014 Adam Wathan</copyright>
+        <itunes:subtitle>Full Stack Radio is a podcast for developers interested in building great software products.</itunes:subtitle>
+        <itunes:author>John Doe</itunes:author>
+
+        <itunes:summary>Full Stack Radio is a podcast for developers interested in building great software products.</itunes:summary>
+
+        <description>Full Stack Radio is a podcast for developers interested in building great software products.</description>
+
+        <itunes:owner>
+            <itunes:name>Adam Wathan</itunes:name>
+            <itunes:email>adam.wathan@gmail.com</itunes:email>
+        </itunes:owner>
+
+        <itunes:image href="http://fullstackradio.github.io/img/podcast-cover.jpg" />
+
+        <itunes:category text="Technology">
+            <itunes:category text="Tech News"/>
+        </itunes:category>
+
+        {% for episode in data.episodes %}
+        <item>
+            <title>Episode {{ episode.number }}: {{ episode.title }}</title>
+            <itunes:author>Adam Wathan</itunes:author>
+            <itunes:summary>
+                <![CDATA[{{ episode.itunes_summary }}]]>
+            </itunes:summary>
+            <itunes:image href="http://fullstackradio.github.io/img/podcast-cover.jpg" />
+            <enclosure url="{{ episode.download }}" length="{{ episode.filesize }}" type="audio/mp3" />
+            <guid>{{ episode.download }}</guid>
+            <pubDate>{{ episode.date|date("D, d M Y H:i:s O", "Etc/UTC") }}</pubDate>
+            <itunes:duration>{{ episode.duration }}</itunes:duration>
+        </item>
+        {% endfor %}
+
+    </channel>
+</rss>
