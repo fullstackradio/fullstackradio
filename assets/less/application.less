@@ -7,6 +7,16 @@
 
 @headings-font-weight: 700;
 
+@brand-color: #3fb1b1;
+
+body {
+    border-top: 10px solid @brand-color;
+}
+
+.podcastLogo {
+    max-width: 100%;
+}
+
 .u-textSubtle {
     color: @gray-lighter;
 }
@@ -15,8 +25,15 @@
     max-width: @container-md;
 }
 
+.siteContent {
+    margin-top: @line-height-computed;
+}
+
 .siteHeader {
     margin-bottom: 2em;
+    &-title {
+        margin-top: 0;
+    }
 }
 
 .sidebar-section {
