@@ -13,10 +13,7 @@
         {{ episode.blocks.content|raw }}
     </div>
     <div class="episode-audio">
-        <audio controls class="episode-audio-player">
-          <source src="{{ episode.download }}" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+        <iframe frameborder='0' height='36px' scrolling='no' seamless src='https://simplecast.fm/e/{{ episode.embed_id }}?style=dark' width='100%'></iframe>
         <div class="text-right">
             <a href="{{ episode.download }}">Download</a>
         </div>
