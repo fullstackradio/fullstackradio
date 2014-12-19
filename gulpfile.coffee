@@ -18,7 +18,6 @@ gulp.task 'css', ->
     .on 'error', notify.onError()
     .pipe rename 'style.css'
     .pipe gulp.dest cssTarget
-    .pipe notify 'LESS compiled'
 
 gulp.task 'watch', ->
     gulp.watch lessDir + '/**/*.less', ['css']

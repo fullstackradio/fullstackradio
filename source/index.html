@@ -7,6 +7,11 @@ use:
 
 <div class="episodes">
     {% for episode in data.episodes %}
-        {% include "_episode.twig" %}
+        <div class="block--spaced">
+            {% include "_episode.twig" %}
+            <p class="text-center">
+                <a class="u-textLarge" href="{{ site.url }}{{ episode.url }}">Discuss this episode</a>
+            </p>
+        </div>
     {% endfor %}
 </div>

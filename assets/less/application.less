@@ -21,6 +21,10 @@ body {
     color: @gray-lighter;
 }
 
+.u-textLarge {
+    font-size: @font-size-large;
+}
+
 .container-fluid {
     max-width: @container-md;
 }
@@ -62,7 +66,6 @@ body {
 }
 
 .episode {
-    margin-bottom: 5em;
     &-header {
         &-title {
             margin-top: 0;
@@ -82,9 +85,14 @@ body {
         }
     }
     &-links {
+        margin-bottom: 2em;
         &-heading {
             font-size: @font-size-large;
             margin-top: 0;
         }
     }
+}
+
+.block--spaced {
+    margin-bottom: 5em;
 }
