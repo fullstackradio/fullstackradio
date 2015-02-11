@@ -4,7 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ site.title }}{% if page.number is defined %} - Episode {{ page.number }}: {% endif %}{% if page.title %}{{ page.title }}{% endif %}</title>
+
+    <meta property="og:title" content="{{ site.title }}{% if page.number is defined %} - {{ page.number }}: {% endif %}{% if page.title %}{{ page.title }}{% endif %}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://fullstackradio.com/{% if page.number is defined %}episodes/{{ page.number }}{% endif %}">
+    <meta property="og:image" content="http://fullstackradio.com/img/podcast-cover.jpg">
+    <meta property="og:description" content="A podcast for developers interested in building great software products.">
+
+    <title>{{ site.title }}{% if page.number is defined %} - {{ page.number }}: {% endif %}{% if page.title %}{{ page.title }}{% endif %}</title>
 
     <link href="http://simplecast.fm/podcasts/279/rss" rel="alternate" title="Full Stack Radio RSS" type="application/rss+xml" />
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:400,700,900'>
