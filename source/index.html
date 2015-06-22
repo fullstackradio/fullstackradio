@@ -5,7 +5,18 @@ use:
 ---
 
 <div class="episodes">
-    {% for episode in data.episodes %}
+    <div class="block--spaced">
+        {% include "_episode.twig" with {'episode': data.episodes.first()} %}
+        <p class="text-center">
+            <a class="u-textLarge u-mediumBold" href="{{ site.url }}{{ data.episodes.first().url }}">Discuss this episode</a>
+        </p>
+    </div>
+    <div class="block--spaced visible-xs-block">
+        <a href="https://hired.com/?utm_source=podcast&utm_medium=fullstackradio&utm_content=banner-4k">
+            <img class="img-fit" src="/img/sponsors/hired-horizontal.png">
+        </a>
+    </div>
+    {% for episode in data.episodes[1:] %}
         <div class="block--spaced">
             {% include "_episode.twig" %}
             <p class="text-center">
